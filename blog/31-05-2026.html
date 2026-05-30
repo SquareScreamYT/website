@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/studio/renderertheme.css">
+</head>
+<body>
+  <div id="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+  </div>
+
+  <div id="markdown-body" class="markdown-body"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id/lib/index.umd.js"></script>
+  <script>
+    // name of this file so it gets whatever the file's name is
+    let page = window.location.pathname.split("/").pop().replace(/\.[^/.]+$/, "");
+    if (!page || page === "") page = "index";
+    const markdownSource = page + ".md";
+  </script>
+  <script src="/studio/rendererscript.js"></script>
+</body>
+</html>
